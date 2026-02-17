@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Plano Quinzenal — Completo | Barbearia Junior</title>
+  <meta name="description" content="Assine o Plano Quinzenal — Completo | Barbearia Junior. Rápido, simples e pela WhatsApp." />
+  <style>
+    :root{
+      --bg:#121212;
+      --card:#1A1A1A;
+      --text:#FFFFFF;
+      --muted:#BDBDBD;
+      --border:#2A2A2A;
+      --accent:#F9B000; /* amarelo */
+      --accent-dark:#e0a300;
+      --radius:12px;
+      --gap:14px;
+      font-family: "Montserrat", "Inter", Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      padding:18px;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      font-size:16px;
+    }
+    .wrap{width:100%;max-width:420px}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:18px;
+      box-shadow:0 8px 30px rgba(0,0,0,0.5);
+    }
+    .logo{display:flex;align-items:center;justify-content:center;margin-bottom:8px}
+    .logo img{height:72px;width:auto;filter:brightness(1);}
+
+    h1{font-size:20px;margin:6px 0 4px 0;text-align:center;letter-spacing:0.2px;font-weight:800}
+    .price{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:12px}
+    .price .box{background:var(--accent);color:#000;padding:12px 18px;border-radius:12px;font-weight:800;font-size:20px}
+    .price small{color:var(--muted);font-size:13px}
+
+    .benefits{margin-bottom:12px}
+    .benefits li{list-style:none;color:var(--muted);padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.02)}
+    .muted-line{color:var(--muted);font-size:13px;text-align:center;margin-bottom:12px}
+
+    .field{margin-bottom:12px}
+    label{display:block;font-size:13px;margin-bottom:6px;color:var(--muted)}
+    input[type="text"]{
+      width:100%;padding:12px;border-radius:10px;border:1px solid var(--border);
+      background:transparent;color:var(--text);font-size:15px;
+    }
+
+    .payments{display:flex;gap:10px;margin:10px 0 6px 0}
+    .paycard{
+      flex:1;padding:12px;border-radius:10px;border:1px solid var(--border);
+      text-align:center;cursor:pointer;background:#111;
+      transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+      user-select:none;
+    }
+    .paycard small{display:block;color:var(--text);font-size:13px;margin-top:6px}
+    .paycard .amt{display:block;margin-top:8px;font-weight:700;color:#000}
+    .paycard.selected{box-shadow:0 8px 20px rgba(249,176,0,0.12);transform:translateY(-3px);border-color:rgba(249,176,0,0.12);background:linear-gradient(180deg,var(--accent),var(--accent-dark));}
+
+    .selected-line{font-weight:700;text-align:center;margin:10px 0 6px 0;color:var(--text)}
+
+    .dates{display:flex;gap:10px;justify-content:space-between;margin-bottom:12px}
+    .datebox{flex:1;padding:10px;border-radius:8px;border:1px solid var(--border);background:#0f0f0f;text-align:center;font-size:14px;color:var(--muted)}
+
+    .terms{display:flex;gap:8px;align-items:center;margin:12px 0}
+    .terms input{width:18px;height:18px}
+    .terms label{font-size:13px;color:var(--muted)}
+
+    .cta{display:flex;gap:10px;align-items:center;justify-content:center;margin-top:6px}
+    .btn{
+      width:100%;padding:14px;border-radius:10px;border:0;font-weight:800;font-size:16px;cursor:pointer;
+      background:var(--accent);color:#000;display:flex;align-items:center;gap:10px;justify-content:center;
+      box-shadow:0 10px 28px rgba(249,176,0,0.12);
+    }
+    .btn svg{width:20px;height:20px}
+    .btn[disabled]{opacity:.6;cursor:not-allowed;box-shadow:none}
+
+    .foot{font-size:12px;color:var(--muted);text-align:center;margin-top:10px}
+    @media(min-width:560px){body{padding:30px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="region" aria-label="Plano Quinzenal — Completo">
+      <div class="logo">
+        <img src="logo.png" alt="Barbearia Junior logo" onerror="this.style.display='none'">
+      </div>
+
+      <h1>Plano Quinzenal — Completo</h1>
+
+      <div class="price" role="contentinfo" aria-live="polite">
+        <div class="box">R$ 90</div>
+        <small>/ mês</small>
+      </div>
+
+      <ul class="benefits" aria-hidden="false">
+        <li>✔ 2 cortes de cabelo</li>
+        <li>✔ 2 barbas</li>
+        <li>✔ 2 sobrancelhas</li>
+        <li>✔ Prioridade em agendamento</li>
+      </ul>
+
+      <div class="muted-line">Regras: <strong style="color:#fff">Não acumulativo • Individual • Validade 30 dias</strong></div>
+
+      <div class="field">
+        <label for="nome">Nome</label>
+        <input id="nome" type="text" placeholder="Ex: João" autocomplete="name" />
+      </div>
+
+      <div class="field">
+        <label for="sobrenome">Sobrenome</label>
+        <input id="sobrenome" type="text" placeholder="Ex: Silva" autocomplete="family-name" />
+      </div>
+
+      <div style="margin-top:6px;margin-bottom:6px;font-size:13px;color:var(--muted)">Forma de pagamento</div>
+
+      <div class="payments" role="radiogroup" aria-label="Formas de pagamento">
+        <div class="paycard selected" data-method="pix" tabindex="0" role="radio" aria-checked="true">
+          PIX
+          <span class="amt" id="pixval">R$ 90</span>
+        </div>
+        <div class="paycard" data-method="debit" tabindex="0" role="radio" aria-checked="false">
+          Débito
+          <span class="amt" id="debitval">--</span>
+        </div>
+        <div class="paycard" data-method="credit" tabindex="0" role="radio" aria-checked="false">
+          Crédito
+          <span class="amt" id="creditval">--</span>
+        </div>
+      </div>
+
+      <div class="selected-line" id="selectedLine">Valor final selecionado: <strong id="finalValue">R$ 90</strong></div>
+
+      <div class="dates">
+        <div class="datebox">
+          Início<br><strong id="startDate">--/--/----</strong>
+        </div>
+        <div class="datebox">
+          Validade<br><strong id="endDate">--/--/----</strong>
+        </div>
+      </div>
+
+      <div class="terms">
+        <input id="aceite" type="checkbox" />
+        <label for="aceite">Estou ciente da validade de 30 dias e que o plano não é acumulativo.</label>
+      </div>
+
+      <div class="cta">
+        <button id="submitBtn" class="btn" disabled aria-disabled="true" title="Confirmar e enviar pelo WhatsApp">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.52 3.48C18.02 0.98 14.6 0 11.28 0 5.46 0 0.84 4.62 0.84 10.44c0 1.83.48 3.61 1.38 5.2L0 24l8.64-2.28c1.57.86 3.36 1.3 5.16 1.3 5.82 0 10.44-4.62 10.44-10.44 0-3.32-.98-6.74-3.12-9.34zM11.28 21.6c-1.48 0-2.92-.36-4.2-1.04l-.3-.18-5.16 1.36 1.36-4.8-.18-.3c-.68-1.28-1.04-2.72-1.04-4.2 0-4.64 3.78-8.42 8.42-8.42 2.24 0 4.36.86 5.94 2.44 1.58 1.58 2.44 3.7 2.44 5.94 0 4.64-3.78 8.42-8.42 8.42z" fill="#000" opacity="0.001"/>
+            <path d="M17.07 14.79c-.28-.14-1.64-.82-1.9-.91-.26-.09-.45-.14-.64.14s-.73.91-.9 1.09c-.16.18-.32.2-.6.07-1.64-.82-2.71-1.47-3.78-3.33-.28-.48.28-.45.81-1.49.09-.16.05-.3-.03-.44-.08-.14-.64-1.54-.88-2.12-.23-.56-.47-.48-.65-.49-.18-.01-.39-.01-.6-.01-.2 0-.52.07-.79.36-.27.28-1.03 1.01-1.03 2.46 0 1.45 1.05 2.85 1.19 3.05.14.2 2.06 3.34 5 4.7 2.05 1.03 2.68 1.04 3.63.87.55-.1 1.64-.67 1.87-1.32.24-.66.24-1.23.17-1.35-.07-.12-.26-.19-.55-.33z" fill="#000" opacity="0.9"/>
+          </svg>
+          CONFIRMAR E ENVIAR PELO WHATSAPP
+        </button>
+      </div>
+
+      <div class="foot">Ao confirmar, você será direcionado ao WhatsApp para finalizar. Pagamento e agendamento finalizados via *Barbearia Junior*</div>
+    </div>
+  </div>
+
+  <script>
+    const PLAN = {
+      slug: 'quinzenal-completo',
+      name: 'Plano Quinzenal — Completo',
+      basePrice: 90.00,
+      debitPct: 1.99,
+      creditPct: 4.98,
+      whatsNumber: '5551994426290',
+      barbershopName: '*Barbearia Junior*'
+    };
+
+    const fmtMoney = (v) => {
+      const rounded = Math.ceil(v);
+      return rounded.toLocaleString('pt-BR', { style:'currency', currency:'BRL', minimumFractionDigits:0, maximumFractionDigits:0 });
+    };
+
+    const calcDebit = (base) => base * (1 + PLAN.debitPct/100);
+    const calcCredit = (base) => base * (1 + PLAN.creditPct/100);
+
+    const pixValEl = document.getElementById('pixval');
+    const debitValEl = document.getElementById('debitval');
+    const creditValEl = document.getElementById('creditval');
+    const finalValueEl = document.getElementById('finalValue');
+    const displayPriceEl = document.querySelector('.price .box');
+
+    const paycards = Array.from(document.querySelectorAll('.paycard'));
+    const submitBtn = document.getElementById('submitBtn');
+    const nameInput = document.getElementById('nome');
+    const surnameInput = document.getElementById('sobrenome');
+    const aceiteInput = document.getElementById('aceite');
+
+    const base = PLAN.basePrice;
+    pixValEl.textContent = fmtMoney(base);
+    debitValEl.textContent = fmtMoney(calcDebit(base));
+    creditValEl.textContent = fmtMoney(calcCredit(base));
+    displayPriceEl.textContent = fmtMoney(base);
+
+    const pad = n => String(n).padStart(2,'0');
+    const today = new Date();
+    const end = new Date(today.getTime() + 30*24*60*60*1000);
+    document.getElementById('startDate').textContent = pad(today.getDate()) + '/' + pad(today.getMonth()+1) + '/' + today.getFullYear();
+    document.getElementById('endDate').textContent = pad(end.getDate()) + '/' + pad(end.getMonth()+1) + '/' + end.getFullYear();
+
+    let selectedMethod = 'pix';
+    let selectedValue = Math.ceil(base);
+
+    function selectMethod(methodEl){
+      paycards.forEach(c => {
+        c.classList.remove('selected');
+        c.setAttribute('aria-checked','false');
+      });
+      methodEl.classList.add('selected');
+      methodEl.setAttribute('aria-checked','true');
+      selectedMethod = methodEl.dataset.method;
+      if(selectedMethod === 'pix') selectedValue = Math.ceil(base);
+      if(selectedMethod === 'debit') selectedValue = Math.ceil(calcDebit(base));
+      if(selectedMethod === 'credit') selectedValue = Math.ceil(calcCredit(base));
+      finalValueEl.textContent = selectedValue.toLocaleString('pt-BR', { style:'currency', currency:'BRL', minimumFractionDigits:0, maximumFractionDigits:0 });
+    }
+
+    paycards.forEach(card => {
+      card.addEventListener('click', () => selectMethod(card));
+      card.addEventListener('keydown', (e) => {
+        if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectMethod(card); }
+      });
+    });
+
+    function validate(){
+      const nome = nameInput.value.trim();
+      const sobrenome = surnameInput.value.trim();
+      const ok = nome.length>1 && sobrenome.length>1 && aceiteInput.checked;
+      submitBtn.disabled = !ok;
+      submitBtn.setAttribute('aria-disabled', String(!ok));
+    }
+
+    [nameInput, surnameInput, aceiteInput].forEach(el => {
+      el.addEventListener('input', validate);
+      el.addEventListener('change', validate);
+    });
+
+    submitBtn.addEventListener('click', () => {
+      validate();
+      if(submitBtn.disabled) return;
+
+      const nome = nameInput.value.trim();
+      const sobrenome = surnameInput.value.trim();
+      const inicio = document.getElementById('startDate').textContent;
+      const termino = document.getElementById('endDate').textContent;
+      const valorStr = finalValueEl.textContent;
+
+      const paymentLabel = selectedMethod === 'pix' ? 'PIX' : selectedMethod === 'debit' ? 'Débito' : 'Crédito';
+
+      // Uso de asteriscos (*) para negrito no WhatsApp
+      const msgLines = [
+        `Olá, meu nome é *${nome} ${sobrenome}*.`,
+        `Quero assinar o *${PLAN.name}*.`,
+        ``,
+        `📌 *Forma de pagamento:* ${paymentLabel}`,
+        `💰 *Valor:* ${valorStr}`,
+        ``,
+        `📅 *Início do plano:* ${inicio}`,
+        `📅 *Validade do plano:* ${termino}`,
+        ``,
+        `✂️ *Benefícios:*`,
+        `• 2 cortes, 2 barbas e 2 sobrancelhas`,
+        `• Assinatura individual`,
+        `• Não acumulativo`,
+        ``,
+        `📝 *Declaro que estou ciente:*`,
+        `• O plano vence pelo tempo e não pelo uso`,
+        `• Sem transferência para outras pessoas`,
+        `• Cortes não realizados são perdidos`,
+        ``,
+        `*Aguardo:*`,
+        `👉 Confirmação do meu plano`,
+        `👉 Definição de horário`,
+        `👉 Pré-agendamento do primeiro corte 🙏`,
+        ``,
+        `💈 ${PLAN.barbershopName}`
+      ];
+
+      const wa = `https://wa.me/${PLAN.whatsNumber}?text=${encodeURIComponent(msgLines.join('\n'))}`;
+      window.open(wa, '_blank');
+    });
+
+    validate();
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>HoráriosBJ</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#000000">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">HoráriosBJ</header>
+<main class="container">
+  <label>Data:</label>
+  <input id="date" type="date">
+  <label>Mostrar horários a partir de:</label>
+  <select id="inicio"></select>
+
+  <div id="lista" class="lista"></div>
+
+  <div class="buttons">
+    <button id="gerar" class="primary">Gerar pré-visualização</button>
+    <button id="copiar">Copiar texto</button>
+    <button id="limpar" class="danger">Limpar tudo</button>
+  </div>
+
+  <textarea id="resultado" placeholder="Pré-visualização aparecerá aqui..." readonly></textarea>
+</main>
+
+
+<script src="script.js"></script>
+</body>
+</html>
